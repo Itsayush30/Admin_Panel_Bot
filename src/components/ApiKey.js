@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const ApiKey = () => {
   const [apiKey, setApiKey] = useState("");
   const [response, setResponse] = useState(null);
 
-
   const fetchApiKey = async (token) => {
     try {
-        console.log("Btoken",token)
+      console.log("Btoken", token);
       const res = await fetch("http://localhost:3010/api/v1/apikey", {
         method: "POST",
         headers: {

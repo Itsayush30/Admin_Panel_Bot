@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Admin Panel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Admin Panel application!
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Admin Panel is a web application that provides administrative functionalities. It uses JWT-based authentication to ensure secure access to its features.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Authentication**: Users can sign in using their email and password to obtain a JWT token for accessing authenticated APIs.
+- **JWT-based Authorization**: Authenticated users can access protected resources by providing their JWT token in the request headers.
+- **Admin Dashboard**: Once authenticated, users can access the admin dashboard to manage various aspects of the application.
+- **User Management**: Admins can manage users, including  deleting user accounts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the Admin Panel locally, follow these steps:
 
-### `npm run build`
+1. Clone this repository to your local machine.
+2. Install dependencies by running `npm install`.
+3. Start the development server by running `npm start`.
+4. Access the application in your web browser at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Sign In
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To sign in and obtain a JWT token, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Access the Sign In page of the application.
+2. Enter your email and password in the provided fields.
+3. Click the "Sign In" button.
+4. Upon successful authentication, you will receive a JWT token.
 
-### `npm run eject`
+## Authenticated APIs
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Once authenticated, you can access authenticated APIs by including the JWT token in the request headers. Here's how to do it:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

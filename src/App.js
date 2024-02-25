@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import SignInPage from "./SignInPage";
-import AdminPanel from "./AdminPanel";
-import Body from "./Body";
+import SignInPage from "./components/SignInPage";
+import AdminPanel from "./components/AdminPanel";
+import Body from "./components/Body";
 
 const appRouter = createBrowserRouter([
   {
