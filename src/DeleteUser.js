@@ -32,7 +32,7 @@ const DeleteUser = () => {
       <div className="max-w-md mx-auto p-6 bg-gray-100 rounded-md shadow-md">
         <form onSubmit={handleSubmit}>
           <label className="block mb-4">
-            DeleteUser:
+            Delete User (Add Id) :
             <input
               type="text"
               value={id}

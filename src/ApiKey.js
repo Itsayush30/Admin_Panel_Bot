@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ApiKey = () => {
   const [apiKey, setApiKey] = useState("");
   const [response, setResponse] = useState(null);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
 
+  const fetchApiKey = async (token) => {
     try {
+        console.log("Btoken",token)
       const res = await fetch("http://localhost:3010/api/v1/apikey", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-access-token": token, // Add token to headers
         },
         body: JSON.stringify({
           newApiKey: apiKey,
@@ -27,12 +28,29 @@ const ApiKey = () => {
     }
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      // Fetch token from local storage
+      const token = localStorage.getItem("token");
+      if (token) {
+        fetchApiKey(token);
+      } else {
+        console.error("Token not found in local storage");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setResponse(null);
+    }
+  };
+
   return (
     <>
       <div className="max-w-md mx-auto p-6 bg-gray-100 rounded-md shadow-md">
         <form onSubmit={handleSubmit}>
           <label className="block mb-4">
-            New API Key:
+            New Weather API Key:
             <input
               type="text"
               value={apiKey}
@@ -54,7 +72,6 @@ const ApiKey = () => {
               Success: {response.success ? response.success.toString() : "N/A"}
             </p>
             <p>Message: {response.message ? response.message : "N/A"}</p>
-            
           </div>
         )}
       </div>

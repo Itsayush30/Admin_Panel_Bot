@@ -28,10 +28,12 @@ const SignInPage = () => {
 
       // If the response indicates success, navigate to "/adminpanel"
       if (data && data.success) {
+        // Store the token in local storage
+        localStorage.setItem("token", data.data);
+        console.log(data.data)
         navigate("/adminpanel");
       }
 
-      // Store data in local storage
     } catch (error) {
       console.error("Error:", error);
       setResponse(null);
@@ -73,8 +75,7 @@ const SignInPage = () => {
       {response && (
         <div className="mt-4">
           <p>Success: {response.success.toString()}</p>
-          <p>Message: {response.message}</p>
-          <p>Data: {response.data}</p>
+          <p>Message: {response.error.explanation}</p>
         </div>
       )}
     </div>

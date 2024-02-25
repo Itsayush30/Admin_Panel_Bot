@@ -32,7 +32,8 @@ const MsgFrequency = () => {
       <div className="max-w-md mx-auto p-6 bg-gray-100 rounded-md shadow-md">
         <form onSubmit={handleSubmit}>
           <label className="block mb-4">
-            New Message Frequency:
+            New Message Frequency
+            (As Cron Expression):
             <input
               type="text"
               value={MsgFrequency}
