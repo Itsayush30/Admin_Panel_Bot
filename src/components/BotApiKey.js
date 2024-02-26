@@ -6,7 +6,7 @@ const BotApiKey = () => {
 
   const fetchApiKey = async (token) => {
     try {
-      console.log("Btoken", token);
+      //console.log("Btoken", token);
       const res = await fetch("http://localhost:3010/api/v1/botapikey", {
         method: "POST",
         headers: {
@@ -19,7 +19,7 @@ const BotApiKey = () => {
       });
 
       const data = await res.json();
-      console.log(data);
+      //console.log(data);
       setResponse(data);
     } catch (error) {
       console.error("Error:", error);
@@ -68,9 +68,9 @@ const BotApiKey = () => {
         {response && (
           <div className="mt-4">
             <p>
-              Success: {response.success ? response.success.toString() : "N/A"}
+              Success: {response.success ? response.success.toString() : "False"}
             </p>
-            <p>Message: {response.message ? response.message : "N/A"}</p>
+            <p>Message: {response.success ? response.message : response.error.explanation}</p>
           </div>
         )}
       </div>

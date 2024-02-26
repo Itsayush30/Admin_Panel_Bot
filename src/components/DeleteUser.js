@@ -6,7 +6,7 @@ const DeleteUser = () => {
 
   const fetchDeleteUser = async (token) => {
     try {
-      console.log("Token", token);
+      //console.log("Token", token);
       const res = await fetch("http://localhost:3010/api/v1/user", {
         method: "DELETE",
         headers: {
@@ -19,7 +19,7 @@ const DeleteUser = () => {
       });
 
       const data = await res.json();
-      console.log(data);
+      //console.log(data);
       setResponse(data);
     } catch (error) {
       console.error("Error:", error);
@@ -70,7 +70,7 @@ const DeleteUser = () => {
             <p>
               Success: {response.success ? response.success.toString() : "False"}
             </p>
-            <p>Message: {response.message ? response.message : "N/A"}</p>
+            <p>Message: {response.success ? response.message : response.error.explanation}</p>
           </div>
         )}
       </div>

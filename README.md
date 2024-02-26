@@ -35,7 +35,5 @@ To sign in and obtain a JWT token, follow these steps:
 3. Click the "Sign In" button.
 4. Upon successful authentication, you will receive a JWT token.
 
-## Authenticated APIs
 
-Once authenticated, you can access authenticated APIs by including the JWT token in the request headers. Here's how to do it:
 

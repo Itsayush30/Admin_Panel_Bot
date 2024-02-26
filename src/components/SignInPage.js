@@ -23,14 +23,14 @@ const SignInPage = () => {
       });
 
       const data = await res.json();
-      console.log("here", data);
+      //console.log("here", data);
       setResponse(data);
 
       // If the response indicates success, navigate to "/adminpanel"
       if (data && data.success) {
         // Store the token in local storage
         localStorage.setItem("token", data.data);
-        console.log(data.data)
+        //console.log(data.data)
         navigate("/adminpanel");
       }
 
