@@ -1,13 +1,18 @@
 import React from "react";
-import ApiKey from "./ApiKey";
-import MsgFrequency from "./MsgFrequency";
+import BotApiKey from "./BotApiKey";
+import WeatherApiKey from "./WeatherApiKey";
+import MsgFrequency from "./MsgFrequency"
 import DeleteUser from "./DeleteUser";
+
 
 const AdminPanel = () => {
   return (
     <div className="my-40 mx-96 flex flex-col md:flex-row items-center justify-center">
+       <div className="m-4">
+        <BotApiKey />
+      </div>
       <div className="m-4">
-        <ApiKey />
+        <WeatherApiKey />
       </div>
       <div className="m-4">
         <MsgFrequency />

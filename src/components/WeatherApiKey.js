@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const ApiKey = () => {
+const WeatherApiKey = () => {
   const [apiKey, setApiKey] = useState("");
   const [response, setResponse] = useState(null);
 
   const fetchApiKey = async (token) => {
     try {
       console.log("Btoken", token);
-      const res = await fetch("http://localhost:3010/api/v1/apikey", {
+      const res = await fetch("http://localhost:3010/api/v1/weatherapikey", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,4 +78,4 @@ const ApiKey = () => {
   );
 };
 
-export default ApiKey;
+export default WeatherApiKey;

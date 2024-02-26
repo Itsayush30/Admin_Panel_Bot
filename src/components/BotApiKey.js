@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
-const DeleteUser = () => {
-  const [id, setId] = useState("");
+const BotApiKey = () => {
+  const [apiKey, setApiKey] = useState("");
   const [response, setResponse] = useState(null);
 
-  const fetchDeleteUser = async (token) => {
+  const fetchApiKey = async (token) => {
     try {
-      console.log("Token", token);
-      const res = await fetch("http://localhost:3010/api/v1/user", {
-        method: "DELETE",
+      console.log("Btoken", token);
+      const res = await fetch("http://localhost:3010/api/v1/botapikey", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
           "x-access-token": token, // Add token to headers
         },
         body: JSON.stringify({
-          id: id,
+          newApiKey: apiKey,
         }),
       });
 
@@ -34,7 +34,7 @@ const DeleteUser = () => {
       // Fetch token from local storage
       const token = localStorage.getItem("token");
       if (token) {
-        fetchDeleteUser(token);
+        fetchApiKey(token);
       } else {
         console.error("Token not found in local storage");
       }
@@ -49,11 +49,11 @@ const DeleteUser = () => {
       <div className="max-w-md mx-auto p-6 bg-gray-100 rounded-md shadow-md">
         <form onSubmit={handleSubmit}>
           <label className="block mb-4">
-            Delete User (Add Id) :
+            New Bot API Key:
             <input
               type="text"
-              value={id}
-              onChange={(e) => setId(e.target.value)}
+              value={apiKey}
+              onChange={(e) => setApiKey(e.target.value)}
               className="block w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
             />
           </label>
@@ -68,7 +68,7 @@ const DeleteUser = () => {
         {response && (
           <div className="mt-4">
             <p>
-              Success: {response.success ? response.success.toString() : "False"}
+              Success: {response.success ? response.success.toString() : "N/A"}
             </p>
             <p>Message: {response.message ? response.message : "N/A"}</p>
           </div>
@@ -78,4 +78,4 @@ const DeleteUser = () => {
   );
 };
 
-export default DeleteUser;
+export default BotApiKey;
