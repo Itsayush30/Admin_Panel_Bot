@@ -1,6 +1,9 @@
 # Admin Panel
 
 Welcome to the Admin Panel application!
+<img width="1432" alt="Screenshot 2024-02-26 at 12 01 53 PM" src="https://github.com/Itsayush30/Admin_Panel_Bot/assets/90981890/b9fec51e-a155-46a9-8b4b-fade7d2d15f9">
+
+<img width="1434" alt="Screenshot 2024-02-26 at 12 02 26 PM" src="https://github.com/Itsayush30/Admin_Panel_Bot/assets/90981890/9d076ab2-ca7e-4b6d-b833-de87f02c3a77">
 
 ## Overview
 
